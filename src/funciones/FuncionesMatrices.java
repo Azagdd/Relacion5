@@ -83,15 +83,29 @@ public class FuncionesMatrices {
 	return triangular;
 }
 
-	public static void mayorvalor(int[][] matriz) {
-			int buscarmayor = matriz[0];
+	public static int mayorvalor(int[][] matriz) {
+			int buscarmayor = matriz[0][0];
 			for (int fila = 0; fila < matriz.length; fila++) {
-				for (int columna = 0; columna < matriz [0].length; columna++) {
-					if (matriz[fila][columna] == num)
+				for (int columna = 0; columna < matriz[0].length; columna++) {
+					if (matriz[fila][columna] > buscarmayor)
+						buscarmayor = matriz[fila][columna];
 				}
 			}
 			
 			return buscarmayor;
+		
+	}
+	
+	public static int menorvalor(int[][] matriz) {
+		int buscarmenor = matriz[0][0];
+		for (int fila = 0; fila < matriz.length; fila++) {
+			for (int columna = 0; columna < matriz[0].length; columna++) {
+				if (matriz[fila][columna] < buscarmenor)
+					buscarmenor = matriz[fila][columna];
+			}
+		}
+		
+		return buscarmenor;
 		
 	}
 }
